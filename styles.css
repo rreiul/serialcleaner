@@ -15,12 +15,40 @@ body {
 }
 
 .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.1s, color 0.1s ease;
+    height: 60px;
+}
+
+.nav-wrapper {
     width: 1500px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav.scrolled {
+    background-color: white;
+    color: #132C5C;
+    box-shadow: 1px 1px 10px 1px #132d5c07;
+}
+
+.logo p {
+    font-size: 30px;
     margin: 0;
+    transform: scaleX(1.1);
+    font-style: oblique;
+    font-weight: bolder;
 }
 
 .nav ul {
@@ -52,6 +80,22 @@ body {
     border: none;
 }
 
+.pidecita {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pidecita .pide-cita-button {
+    margin-right: 20px;
+}
+
+.pidecita .estrellas {
+    margin-right: 20px;
+}
+
+
+
 .logo {}
 
 .logo-img {
@@ -64,9 +108,15 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: #132C5C;
+    background-color: #132d5c00;
     justify-content: center;
     display: flex;
+}
+
+.imagenfondo {
+    position: absolute;
+    object-fit: cover; 
+    z-index: -1;
 }
 
 .banner-wrapper {
@@ -82,6 +132,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    z-index: 2;
 }
 
 .titulo h1 {
@@ -292,15 +343,46 @@ body {
     margin: 0px;
 }
 
+.noincluye-individual {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 0px;
+}
+
 .incluye-individual p{
     color: #132C5C;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-#check {
-    height: 30px;
+.noincluye-individual p {
+    color: #B8B8B8;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.incluye-individual #check {
+    height: auto;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.incluye-individual #check path {
+    fill: rgb(0, 255, 4);
+}
+
+.noincluye-individual #check {
+    height: 40px;
     width: auto;
+    flex-shrink: 0;
+}
+
+.noincluye-individual #check path {
+    fill: rgb(255, 255, 255);
 }
 
 .opiniones {
@@ -346,7 +428,7 @@ body {
 }
 
 .coche {
-    height: 370px;
+    height: 420px;
     background-color: white;
     border-radius: 10px;
     display: flex;
