@@ -190,20 +190,19 @@
     }
 
     .quehacemos-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /* Crea 3 columnas iguales */
-        gap: 20px;
-        /* Espacio entre los elementos del grid */
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .quehacemos-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .limpiezadeexteriores {
-        height: 400px;
-        background-color: black;
-        grid-column: span 2;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
     }
 
     .limpiezadeexteriores img {
@@ -238,22 +237,18 @@
     }
     
     .adomicilio {
-        height: 400px;
-        background-color: black;
-        border-radius: 10px;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
     }
 
     .desinfeccion {
-        height: 400px;
-        background-color: black;
-        border-radius: 10px;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
     }
 
     .limpiezadeinteriores {
-        height: 400px;
-        background-color: black;
-        grid-column: span 2;
-        border-radius: 10px;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
     }
 
     .servicios {
@@ -287,6 +282,7 @@
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
+        scrollbar-width: none;
     }
 
     .servicio {
@@ -298,12 +294,12 @@
         flex-direction: column;
         align-items: center;*/
         flex: 0 0 80%;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
     .servicio::-webkit-scrollbar {
         display: none;
-      }
+    }
 
     .servicio:hover {
         transform: translateY(-10px);
@@ -428,7 +424,7 @@
     }
 
     .opiniones-wrapper {
-        width: 1800px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin-left: 40px;
@@ -443,10 +439,12 @@
     }
 
     .opiniones-wrapper h2 {
-        margin: 0;
         margin-bottom: 10px;
         color: white;
         font-size: 36px;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
     }
 
     .opiniones-wrapper p {
@@ -454,22 +452,28 @@
         color: white;
         font-size: 14px;
         text-align: center;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .opiniones-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        /* Crea 3 columnas iguales */
-        gap: 20px;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        margin-left: 40px;
     }
 
+
+    .opiniones-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+
     .coche {
-        height: 370px;
-        background-color: white;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
+        height: 500px;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
     }
 
     #coche1 {
@@ -492,6 +496,7 @@
         margin-top: 10px;
         margin-left: 15px;
         margin-right: 15px;
+        
     }
 
     .persona p {
@@ -525,18 +530,20 @@
     }
 
     .contacto-wrapper {
-        width: 1500px;
+        width: 100%;
         display: flex;
         justify-content: center;
     }
 
     .contacto-dudas {
-        width: 700px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .contacto-dudas h2 {
@@ -544,18 +551,21 @@
         margin: 0;
         margin-bottom: 10px;
         font-size: 36px;
+        text-align: center;
     }
 
     .contacto-dudas p {
         color: #132C5C;
         margin: 0;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .formulario {
         display: flex;
         flex-direction: column;
-        width: 700px;
+        width: 100%;
+
     }
 
     .formulario input {
@@ -609,7 +619,7 @@
     .footer-izq {
         display: flex;
         flex-direction: row;
-        width: 50%;
+        width: 80%;
         height: 50px;
         align-items: center;
     }
@@ -620,12 +630,13 @@
         text-decoration: none;
         color: white;
         font-weight: 700;
+        font-size: 14px;
     }
 
     .footer-der {
         display: flex;
         flex-direction: row;
-        width: 50%;
+        width: 20%;
         height: 50px;
         align-items: center;
         justify-content: end;
@@ -637,5 +648,6 @@
         text-decoration: none;
         color: white;
         font-weight: 700;
+        font-size: 14px;
     }
 }
