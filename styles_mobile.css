@@ -194,11 +194,19 @@
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
-        
+        margin-left: 0;
     }
 
     .quehacemos-grid::-webkit-scrollbar {
         display: none;
+    }
+
+    .primero {
+        margin-left: 40px;
+    }
+    
+    .ultimo {
+        margin-right: 40px;
     }
 
     .limpiezadeexteriores {
@@ -263,11 +271,11 @@
     }
 
     .servicios-wrapper {
-        width: 1300px;
+        width: 1500px;
         display: flex;
         flex-direction: column;
-        margin-left: 40px;
-        margin-right: 0;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .servicios-wrapper h2 {
@@ -282,21 +290,25 @@
     }
 
     .servicios-grid {
+        padding-top: 10px;
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
-        padding-top: 10px;
-        margin-left: 40px;
-        margin-right: 0;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .servicio {
         height: fit-content;
         padding-bottom: 40px;
-        flex: 0 0 80%;
+        flex: 0 0 75%;
         scroll-snap-align: center;
         margin-right: 0;
+    }
+
+    .servicio.ultimo {
+        margin-right: 40px;
     }
 
     .servicio::-webkit-scrollbar {
@@ -429,8 +441,8 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .opiniones-texto {
@@ -463,7 +475,9 @@
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
-        margin-left: 40px;
+        margin-left: 0px;
+        margin-right: 0;
+        align-items: stretch;
     }
 
 
@@ -471,19 +485,32 @@
         display: none;
     }
 
+    .descripcion-opinion {
+        background-color: #F26522;
+    }
+
 
     .coche {
-        height: 50%;
+        display: flex;
+        flex-direction: column;  /* Coloca los elementos verticalmente */
         flex: 0 0 80%;
         scroll-snap-align: center;
-        height: fit-content;
         padding-bottom: 40px;
-        min-height: 25rem;
+        box-sizing: border-box;  /* Asegura que el padding se incluya en el tamaño total */
+        height: 100%;  /* Asegura que el coche ocupe el 100% del contenedor padre */
+    }
+    
+    .descripcion-opinion-container {
+    background-color: #f9f9f9;
+    flex-grow: 1;  /* Permite que el contenedor crezca si es necesario */
+    overflow: hidden; /* Evita que el contenido se desborde */
     }
 
     #coche1 {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
+    height: auto; /* Limita la imagen a su contenedor */
+    max-height: 200px; /* Establece una altura máxima para la imagen */
+    object-fit: cover;
     }
 
     .coche p {
