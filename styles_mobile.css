@@ -234,6 +234,7 @@
         scroll-snap-type: x mandatory;
         /*scrollbar-width: none;*/
         margin-left: 0;
+        margin-right: 0;
     }
 
     .quehacemos-grid::-webkit-scrollbar {
