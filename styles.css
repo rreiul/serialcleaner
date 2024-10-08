@@ -15,7 +15,7 @@ body {
     margin-right: auto;
     font-family: Roboto, 'sans-serif';
     color: white;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .nav {
@@ -35,7 +35,7 @@ body {
 }
 
 .nav-wrapper {
-    width: 1300px;
+    width: 1500px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -139,9 +139,11 @@ body {
 }
 
 .banner-wrapper {
-    width: 1300px;
+    width: 1500px;
     display: flex;
     align-items: center;
+    margin-left: 40px;
+        margin-right: 40px;
 }
 
 .banner-texto {
@@ -202,7 +204,7 @@ body {
 }
 
 .quehacemos-wrapper {
-    width: 1300px;
+    width: 1500px;
     display: flex;
     flex-direction: column;
 }
@@ -551,7 +553,7 @@ body {
 }
 
 .contacto-wrapper {
-    width: 1300px;
+    width: 1500px;
     display: flex;
     justify-content: center;
 }
@@ -623,7 +625,7 @@ body {
 }
 
 .footer-wrapper {
-    width: 1300px;
+    width: 1500px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -714,6 +716,7 @@ body {
     border-radius: 10px;
     flex-direction: column;
     padding: 20px;
+    box-shadow: 1px 1px 10px 1px #132d5c30;
 }
 
 .reserva .pide-cita-button {

@@ -133,7 +133,7 @@
         display: flex;
         align-items: center;
         position: relative; /* Aseguramos que el contenido esté bien posicionado */
-        overflow: hidden; /* Esto se asegura de que cualquier contenido extra se recorte */
+         /* Esto se asegura de que cualquier contenido extra se recorte */
     }
     
     .imagenfondo {
@@ -152,6 +152,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: end;
+        margin: 0;
     }
 
     .banner-texto {
@@ -206,7 +207,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-top: 80px;
+        padding-top: 160px;
         padding-bottom: 40px;
         max-width: 100%;
     }
@@ -734,9 +735,9 @@
     }
 
     .reserva {
-        z-index: 3;
+        z-index: 10000;
         box-shadow: 1px 1px 10px 1px #132d5c30;
         width: 85%;
-        margin-top: -350px;
+        margin-top: 300px;
     }
 }
