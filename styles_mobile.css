@@ -698,15 +698,18 @@
         width: 80%;
         height: 50px;
         align-items: center;
+        justify-content: left;
     }
 
     .footer-izq a {
+        display: flex;
         margin: 0;
-        margin-right: 20px;
+        margin-right: 10px;
         text-decoration: none;
         color: white;
         font-weight: 700;
         font-size: 14px;
+        justify-content: left;
     }
 
     .footer-der {
@@ -720,7 +723,7 @@
 
     .footer-der a {
         margin: 0;
-        margin-left: 20px;
+        margin-left: 0px;
         text-decoration: none;
         color: white;
         font-weight: 700;
