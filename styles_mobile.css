@@ -138,7 +138,9 @@
         position: absolute;
         object-fit: cover;
         z-index: -1;
-        width: 100%;
+        width: auto;
+        content:url("fondo_movil.jpg");
+        height: 100%;
     }
 
     .banner-wrapper {
@@ -152,9 +154,9 @@
         width: 95%;
         margin: 0;
         padding: 0;
-        padding-top:20px;
-        padding-bottom:20px;
-        margin-top: 70%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 300px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -162,6 +164,10 @@
         background-color: #ffffff;
         border-radius: 10px;
         box-shadow: 1px 1px 10px 1px #132d5c30;
+    }
+
+    .titulo {
+        width: 100%;
     }
 
     .titulo h1 {
@@ -173,6 +179,10 @@
         margin-left: 20px;
         margin-right: 20px;
         color: #132C5C;
+    }
+
+    .descripcion {
+        width: 100%;
     }
 
     .descripcion p {
@@ -245,9 +255,8 @@
 
     .limpiezadeexteriores img {
         width: 100%;
-        height: auto;
+        height: 100%;
         position: absolute;
-        bottom: -200px;
         left: 0;
         object-fit: cover;
     }
