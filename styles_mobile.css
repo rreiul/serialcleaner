@@ -12,7 +12,7 @@
         margin-right: auto;
         font-family: Roboto, 'sans-serif';
         color: white;
-        background-color: black;
+        background-color: #fff;
         overflow-x: hidden;
     }
 
@@ -122,9 +122,9 @@
         height: 60px;
         width: 200px;
     }
-
+    
     .banner {
-        min-height: 53%;
+        min-height: 550px; /* Cambié % por vh para mantener la relación de pantalla */
         width: 100%;
         padding: 0;
         margin: 0;
@@ -132,22 +132,26 @@
         justify-content: center;
         display: flex;
         align-items: center;
+        position: relative; /* Aseguramos que el contenido esté bien posicionado */
+        overflow: hidden; /* Esto se asegura de que cualquier contenido extra se recorte */
     }
-
+    
     .imagenfondo {
-        position: absolute;
-        object-fit: cover;
-        z-index: -1;
+        object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
         width: 100%;
-        content:url("fondo_movil.jpg");
-        height: 100%;
+        height: 100%; /* Hace que la imagen llene todo el banner */
+        position: absolute; /* Para que la imagen esté detrás del contenido */
+        z-index: -1;
+        content: url("fondo_movil.jpg"); /* Para que el contenido esté por encima de la imagen */
     }
+    
 
     .banner-wrapper {
         width: 1500px;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: end;
     }
 
     .banner-texto {
@@ -176,8 +180,6 @@
         font-size: 24px;
         margin: 0;
         text-align: left;
-        margin-left: 20px;
-        margin-right: 20px;
         color: #132C5C;
     }
 
@@ -189,8 +191,6 @@
         font-weight: 200;
         font-size: 14px;
         text-align: left;
-        margin-left: 20px;
-        margin-right: 20px;
         color: #132C5C;
     }
 
@@ -314,6 +314,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin: 0;
     }
 
     .servicios-wrapper h2 {
@@ -325,6 +326,7 @@
         margin-bottom: 40px;
         font-size: 24px;
         font-family: "Crimson Pro", serif;
+        padding: 0;
     }
 
     .servicios-grid {
@@ -335,6 +337,7 @@
         margin-left: 0;
         margin-right: 0;
         padding-top: 20px;
+        width: 100%;
     }
 
     .servicios-grid::-webkit-scrollbar {
@@ -728,5 +731,12 @@
         color: white;
         font-weight: 700;
         font-size: 14px;
+    }
+
+    .reserva {
+        z-index: 3;
+        box-shadow: 1px 1px 10px 1px #132d5c30;
+        width: 85%;
+        margin-top: -350px;
     }
 }

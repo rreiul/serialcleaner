@@ -24,15 +24,15 @@
                 <nav class="menu">
                     <ul>
                         <a href="#banner">
-                        <li>Inicio</li></a>
+                            <li>Inicio</li></a>
                         <a href="#quehacemos">
-                        <li>Qué hacemos</li></a>
+                            <li>Qué hacemos</li></a>
                         <a href="#servicios">
-                        <li>Servicios</li></a>
+                            <li>Servicios</li></a>
                         <a href="#opiniones">
-                        <li>Opiniones</li></a>
+                            <li>Opiniones</li></a>
                         <a href="#contacto">
-                        <li>Contacto</li></a>
+                            <li>Contacto</li></a>
                         <button class="pide-cita-button">Pide cita</button>
                     </ul>
                 </nav>
@@ -41,38 +41,71 @@
         <div class="banner" id="banner">
             <img class="imagenfondo" src="fondo.jpg" alt>
             <div class="banner-wrapper">
-                <div class="banner-texto">
-                    <div class="titulo">
-                        <h1>Lavado de coches a domicilio</h1>
+            </div>
+        </div>
+        <div class="reserva">
+            <div class="titulo">
+                <h1>Lavado de coches a domicilio</h1>
+            </div>
+            <div class="descripcion">
+                <p>¡Conserva tu coche como nuevo con nuestro lavado a
+                    domicilio!</p>
+            </div>
+            <form id="reservationForm">
+                <div class="nombre-telefono">
+                    <input type="text" id="name" name="name"
+                        placeholder="Nombre" required>
+                    <input type="tel" id="phone" name="phone" required
+                        placeholder="Teléfono">
+                </div>
+                <input type="text" id="name" name="name" placeholder="Ubicación"
+                    required>
+                <select id="time" name="time" required
+                    placeholder="Tipo de servicio">
+                    <option value="disabled" disabled selected>Tipo de
+                        servicio</option>
+                    <option value="basico">Básico</option>
+                    <option value="estandar">Estándar</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <div class="nombre-telefono">
+                    <input type="date" id="date" name="date" required
+                        placeholder="Fecha">
+                    <select id="time" name="time" required>
+                        <option value="disabled" disabled selected>Hora</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                    </select>
+                </div>
+                <button type="submit" class="pide-cita-button">Pide
+                    cita</button>
+            </form>
+            <div class="pidecita">
+                <div class="estrellas-valoraciones">
+                    <div class="estrellas">
+                        <img id="estrella" src="star-svgrepo-com.svg"
+                            alt>
+                        <img id="estrella" src="star-svgrepo-com.svg"
+                            alt>
+                        <img id="estrella" src="star-svgrepo-com.svg"
+                            alt>
+                        <img id="estrella" src="star-svgrepo-com.svg"
+                            alt>
+                        <img id="estrella" src="star-svgrepo-com.svg"
+                            alt>
                     </div>
-                    <div class="descripcion">
-                        <p>Conserva tu coche como nuevo con nuestro lavado a
-                            domicilio. Servicio profesional que cuida cada
-                            detalle para un brillo duradero y una limpieza
-                            impecable, sin que tengas que moverte de casa.</p>
-                    </div>
-                    <div class="pidecita">
-                        <button class="pide-cita-button">
-                            Pide cita
-                        </button>
-                        <div class="estrellas-valoraciones">
-                            <div class="estrellas">
-                                <img id="estrella" src="star-svgrepo-com.svg"
-                                    alt>
-                                <img id="estrella" src="star-svgrepo-com.svg"
-                                    alt>
-                                <img id="estrella" src="star-svgrepo-com.svg"
-                                    alt>
-                                <img id="estrella" src="star-svgrepo-com.svg"
-                                    alt>
-                                <img id="estrella" src="star-svgrepo-com.svg"
-                                    alt>
-                            </div>
-                            <div class="valoraciones">
-                                <p>Basado en <strong>+200
-                                        valoraciones</strong></p>
-                            </div>
-                        </div>
+                    <div class="valoraciones">
+                        <p>Basado en <strong>+200
+                                valoraciones</strong></p>
                     </div>
                 </div>
             </div>
