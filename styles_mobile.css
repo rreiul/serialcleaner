@@ -49,9 +49,10 @@
     }
 
     .logo p {
+        margin: 0;
         font-size: 30px;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 30px;
+        margin-right: 20px;
         transform: scaleX(1.1);
         font-style: oblique;
         font-weight: bolder;
@@ -90,19 +91,28 @@
 
     .pidecita {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .pidecita .pide-cita-button {
-        margin-right: 20px;
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .estrellas-valoraciones {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
     }
 
     .pidecita .estrellas {
-        margin-right: 20px;
+        margin-right: 10px;
         margin-left: 0px;
     }
 
@@ -114,58 +124,70 @@
     }
 
     .banner {
-        min-height: 90%;
+        min-height: 53%;
         width: 100%;
         padding: 0;
         margin: 0;
         background-color: #132d5c00;
         justify-content: center;
         display: flex;
+        align-items: center;
     }
 
     .imagenfondo {
         position: absolute;
         object-fit: cover;
         z-index: -1;
+        width: 100%;
     }
 
     .banner-wrapper {
         width: 1500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .banner-texto {
-        width: 100%;
+        width: 95%;
         margin: 0;
         padding: 0;
-        padding-top: 50px;
+        padding-top:20px;
+        padding-bottom:20px;
+        margin-top: 70%;
         height: 100%;
-        text-align: left;
-        justify-content: center;
         display: flex;
         flex-direction: column;
         z-index: 2;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px 1px #132d5c30;
     }
 
     .titulo h1 {
+        font-family: "Crimson Pro", serif;
         font-weight: 700;
-        font-size: 3rem;
+        font-size: 24px;
         margin: 0;
-        text-align: center;
-        margin-left: 40px;
-        margin-right: 40px;
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #132C5C;
     }
 
     .descripcion p {
-        font-weight: 500;
-        font-size: 0.95rem;
-        text-align: center;
-        margin-left: 40px;
-        margin-right: 40px;
+        font-weight: 200;
+        font-size: 14px;
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #132C5C;
     }
 
     .valoraciones p {
-        font-size: 0.95rem;
+        font-size: 14px;
         text-align: left;
+        color: #132C5C;
     }
 
     .quehacemos {
@@ -174,7 +196,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-top: 40px;
+        padding-top: 80px;
         padding-bottom: 40px;
         max-width: 100%;
     }
@@ -186,20 +208,21 @@
     }
 
     .quehacemos-wrapper h2 {
+        font-family: "Crimson Pro", serif;
         justify-content: center;
         color: #132C5C;
         margin: 0;
         align-self: center;
         align-self: center;
         margin-bottom: 40px;
-        font-size: 36px;
+        font-size: 24px;
     }
 
     .quehacemos-grid {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        scrollbar-width: none;
+        /*scrollbar-width: none;*/
         margin-left: 0;
     }
 
@@ -208,11 +231,11 @@
     }
 
     .primero {
-        margin-left: 40px;
+        margin-left: 10px;
     }
 
     .ultimo {
-        margin-right: 40px;
+        margin-right: 10px;
     }
 
     .limpiezadeexteriores {
@@ -268,21 +291,19 @@
 
     .servicios {
         width: 100%;
+        background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: center;
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: white;
         max-width: 100%;
     }
 
     .servicios-wrapper {
-        width: 1500px;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: 0px;
-        margin-right: 0px;
     }
 
     .servicios-wrapper h2 {
@@ -290,32 +311,30 @@
         color: #132C5C;
         margin: 0;
         align-self: center;
-        padding-bottom: 40px;
-        font-size: 36px;
-        text-align: center;
-
+        align-self: center;
+        margin-bottom: 40px;
+        font-size: 24px;
+        font-family: "Crimson Pro", serif;
     }
 
     .servicios-grid {
-        padding-top: 10px;
         display: flex;
-        overflow-x: scroll;
+        overflow-x: auto;
         scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        margin-left: 0px;
-        margin-right: 0px;
+        /*scrollbar-width: none;*/
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 20px;
+    }
+
+    .servicios-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .servicio {
-        height: fit-content;
-        padding-bottom: 40px;
         flex: 0 0 75%;
         scroll-snap-align: center;
-        margin-right: 0;
-    }
-
-    .servicio.ultimo {
-        margin-right: 40px;
+        height: fit-content;
     }
 
     .servicio::-webkit-scrollbar {
@@ -337,6 +356,7 @@
         margin-bottom: 10px;
         margin-top: 0px;
         font-size: 32px;
+        font-family: "Crimson Pro", serif;
     }
 
     .servicio-descripcion h2 {
@@ -461,11 +481,12 @@
     }
 
     .opiniones-wrapper h2 {
-        margin-bottom: 10px;
+        margin-bottom: 24px;
+        font-family: "Crimson Pro", serif;
         color: white;
-        font-size: 36px;
-        margin-left: 40px;
-        margin-right: 40px;
+        font-size: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
         text-align: center;
     }
 
@@ -474,15 +495,15 @@
         color: white;
         font-size: 14px;
         text-align: center;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .opiniones-grid {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        scrollbar-width: none;
+        /*scrollbar-width: none;*/
         margin-left: 0px;
         margin-right: 0;
         align-items: stretch;
@@ -582,16 +603,17 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .contacto-dudas h2 {
         color: #132C5C;
         margin: 0;
         margin-bottom: 10px;
-        font-size: 36px;
+        font-size: 24px;
         text-align: center;
+        font-family: "Crimson Pro", serif;
     }
 
     .contacto-dudas p {
@@ -599,6 +621,9 @@
         margin: 0;
         margin-bottom: 20px;
         text-align: center;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .formulario {
